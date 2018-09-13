@@ -7,7 +7,13 @@
  */
 const getFlags = arr => {
   /* your logic here...*/
-    return arr
+    let res = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].flags.length; j++){
+            res.push( arr[i].flags[j] );
+        }               
+    }
+    return res;
 };
 
 export default getFlags;
