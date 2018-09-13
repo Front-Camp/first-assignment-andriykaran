@@ -12,6 +12,17 @@
  */
 const sumElements = arr => {
   /* your logic here...*/
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (isNaN(arr[i])) {
+            continue;
+        } else if (arr[i] === Number.POSITIVE_INFINITY || arr[i] === Number.NEGATIVE_INFINITY){
+                continue;   
+        } else {
+            sum = sum + Number(arr[i]);
+        }
+    }
+    return sum;
 };
 
 export default sumElements;
