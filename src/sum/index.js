@@ -11,7 +11,11 @@
 */
 const sum = (a, b) => {
   /* your logic here...*/
-    return a + b;
+    if (typeof a === 'number' && typeof b === 'number' && isFinite(a) && isFinite(b)) { 
+        return a + b;
+    } else {
+        throw 'Parameter is Nan';
+    }
 };
 
 export default sum;
